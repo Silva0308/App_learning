@@ -20,6 +20,7 @@ class CustomColl : UICollectionViewCell{
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(cellTap))
         collConstr()
         addGestureRecognizer(recognizer)
+        image.getImage()
     }
     
     required init?(coder: NSCoder) {

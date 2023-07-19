@@ -82,5 +82,22 @@ class CustomCell: UITableViewCell{
         ])
         
     }
+    func coordCount(coord: Coordinate){
+        guard let lat = coord.lat, let lon = coord.lon else {
+            circle.backgroundColor = .gray
+            return
+        }
+        if lat+lon >= 100 {
+            circle.backgroundColor = UIColor(red: 153/255, green: 102/255, blue: 1, alpha: 1)
+        }
+        else{
+            circle.backgroundColor = UIColor(red: 102/255, green: 1, blue: 1, alpha: 1)
+        }
+    }
+    func findName(town: TownModel){
+        label1.text = town.name
+        label2.text = town.timezone
+        label3.text = town.currency
+    }
 }
 
