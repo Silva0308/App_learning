@@ -20,7 +20,12 @@ class CollectionViewController: UICollectionViewController{
             return UICollectionViewCell()
         }
         cell.tap =  {[weak self] myImage in
-            self?.navigationController?.pushViewController(ImageViewController(name: myImage), animated: true)
+            let animation = CATransition()
+            animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            animation.type = .moveIn
+            animation.duration = 3
+            self?.navigationController?.view.layer.add(animation, forKey: nil)
+            self?.navigationController?.pushViewController(ImageViewController(name: myImage), animated: false)
         }
         return cell
     }
