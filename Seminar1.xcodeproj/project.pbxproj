@@ -19,6 +19,9 @@
 		524CC99F2A66F9C100F97E73 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC99E2A66F9C100F97E73 /* NewsModel.swift */; };
 		524CC9A12A670B9000F97E73 /* ImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC9A02A670B9000F97E73 /* ImageViewExtensions.swift */; };
 		524CC9A32A670CFA00F97E73 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC9A22A670CFA00F97E73 /* ImageModel.swift */; };
+		524CC9CE2A703C0000F97E73 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC9CD2A703C0000F97E73 /* DataService.swift */; };
+		524CC9D02A70428200F97E73 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC9CF2A70428200F97E73 /* Theme.swift */; };
+		524CC9D22A70447A00F97E73 /* ThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC9D12A70447A00F97E73 /* ThemeController.swift */; };
 		52BC3B122A58738B0060B9A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC3B112A58738B0060B9A1 /* AppDelegate.swift */; };
 		52BC3B142A58738B0060B9A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC3B132A58738B0060B9A1 /* SceneDelegate.swift */; };
 		52BC3B162A58738B0060B9A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC3B152A58738B0060B9A1 /* ViewController.swift */; };
@@ -39,6 +42,9 @@
 		524CC99E2A66F9C100F97E73 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		524CC9A02A670B9000F97E73 /* ImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtensions.swift; sourceTree = "<group>"; };
 		524CC9A22A670CFA00F97E73 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		524CC9CD2A703C0000F97E73 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		524CC9CF2A70428200F97E73 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		524CC9D12A70447A00F97E73 /* ThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeController.swift; sourceTree = "<group>"; };
 		52BC3B0E2A58738B0060B9A1 /* Seminar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seminar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BC3B112A58738B0060B9A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BC3B132A58738B0060B9A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 				524CC99E2A66F9C100F97E73 /* NewsModel.swift */,
 				524CC9A02A670B9000F97E73 /* ImageViewExtensions.swift */,
 				524CC9A22A670CFA00F97E73 /* ImageModel.swift */,
+				524CC9CD2A703C0000F97E73 /* DataService.swift */,
+				524CC9CF2A70428200F97E73 /* Theme.swift */,
+				524CC9D12A70447A00F97E73 /* ThemeController.swift */,
 			);
 			path = Seminar1;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 				524CC9872A5DC98000F97E73 /* ImageViewController.swift in Sources */,
 				52BC3B122A58738B0060B9A1 /* AppDelegate.swift in Sources */,
 				52BC3B142A58738B0060B9A1 /* SceneDelegate.swift in Sources */,
+				524CC9CE2A703C0000F97E73 /* DataService.swift in Sources */,
 				524CC9A12A670B9000F97E73 /* ImageViewExtensions.swift in Sources */,
 				524CC9852A5DC6E000F97E73 /* Custom Coll.swift in Sources */,
 				524CC9832A5DC5AD00F97E73 /* CollectionViewController.swift in Sources */,
@@ -185,6 +195,8 @@
 				524CC9812A5DC0F500F97E73 /* CustomCell.swift in Sources */,
 				524CC97D2A5DBD4D00F97E73 /* CustomButton.swift in Sources */,
 				524CC99D2A66F26500F97E73 /* TownModel.swift in Sources */,
+				524CC9D02A70428200F97E73 /* Theme.swift in Sources */,
+				524CC9D22A70447A00F97E73 /* ThemeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

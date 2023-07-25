@@ -9,6 +9,7 @@ import UIKit
 class CollectionViewController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Theme.curTheme.backgroundColor
         collectionView.register(CustomColl.self, forCellWithReuseIdentifier: "Collect")
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

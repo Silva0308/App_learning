@@ -18,6 +18,7 @@ class ImageViewController : UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Theme.curTheme.backgroundColor
         view.addSubview(image)
     }
     

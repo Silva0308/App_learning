@@ -39,7 +39,7 @@ class NewViewController: UIViewController{
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor =  .green
+        view.backgroundColor =  Theme.curTheme.backgroundColor
         title = "Новый контроллер"
         view.addSubview(rect1)
         view.addSubview(rect2)

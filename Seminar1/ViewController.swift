@@ -21,21 +21,28 @@ class ViewController: UIViewController {
     let button1 = CustomButton(name: "Изменить цвет экрана")
     let button3 = CustomButton(name: "Перейти на TableViewController")
     let button4 = CustomButton(name: "Перейти на  CollectionViewController")
+    let button5 = CustomButton(name: "Выбрать тему")
     var isTap = false
     override func viewDidLoad() {
         super.viewDidLoad() //вызвали базовый метод
-        view.backgroundColor = .white
+        view.backgroundColor = Theme.curTheme.backgroundColor
         view.addSubview(label)
         view.addSubview(button)
         view.addSubview(button1)
         view.addSubview(button3)
         view.addSubview(button4)
+        view.addSubview(button5)
         
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         button1.addTarget(self, action:#selector(changeColor), for: .touchUpInside)
         button3.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
         button4.addTarget(self, action: #selector(tapToCollection), for: .touchUpInside)
+        button5.addTarget(self, action: #selector(changeTheme), for: .touchUpInside)
         setConstraint()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = Theme.curTheme.backgroundColor
     }
     func setConstraint(){
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +50,7 @@ class ViewController: UIViewController {
         button1.translatesAutoresizingMaskIntoConstraints = false
         button3.translatesAutoresizingMaskIntoConstraints = false
         button4.translatesAutoresizingMaskIntoConstraints = false
+        button5.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
@@ -68,7 +76,12 @@ class ViewController: UIViewController {
             button4.topAnchor.constraint(equalTo: button3.bottomAnchor, constant: 5),
             button4.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button4.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            button4.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            button4.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            button5.topAnchor.constraint(equalTo: button4.bottomAnchor, constant: 5),
+            button5.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button5.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            button5.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     @objc func buttonClick(){
@@ -86,8 +99,12 @@ class ViewController: UIViewController {
         if isTap{
             view.backgroundColor = .yellow
         } else{
-            view.backgroundColor = .white
+            view.backgroundColor = Theme.curTheme.backgroundColor
         }
+    }
+    
+    @objc func changeTheme(){
+        navigationController?.pushViewController(ThemeController(), animated: false)
     }
 }
 	

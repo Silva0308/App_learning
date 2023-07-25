@@ -9,18 +9,23 @@ import UIKit
 class TableViewController : UITableViewController{
     
     private var networkService = NetworkService()
+    private var dataServise = DataService()
     private var towns: [TownModel] = []
     
-    override func viewDidLoad() {        super.viewDidLoad()
-        view.backgroundColor = .white
-        tableView.backgroundColor = .white
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = Theme.curTheme.backgroundColor
+        tableView.backgroundColor = Theme.curTheme.backgroundColor
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .white
         tableView.register(CustomCell.self, forCellReuseIdentifier: "Cell")
-        networkService.getData{ town in
-            self.towns = town
+        towns = dataServise.getData()
+        tableView.reloadData()
+        networkService.getData{[weak self] town in
+            self?.towns = town
+            self?.dataServise.putData(towns: town)
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
         // networkService.getCat( with: 404)
